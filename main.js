@@ -3,9 +3,16 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
-document.querySelector('span.like-glyph').addEventListener("click",() => alert("I was clicked"))
+ const heartTags = document.querySelectorAll('span.like-glyph')
+ console.log(heartTags)
 
-
+ // grabs each of the like buttons and console.logs "like" when clicked
+for (const heartTag of heartTags) {
+  heartTag.addEventListener("click",(e) => {
+    console.log("like")
+  })
+  
+}
 
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
