@@ -15,7 +15,7 @@ const FULL_HEART = '♥'
       heart.className = "activated-heart"
     }
     else {
-      heart.innertext = EMPTY_HEART
+      heart.innerText = EMPTY_HEART
       heart.className = ""
     }
    })
