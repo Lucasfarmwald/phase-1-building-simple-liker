@@ -10,17 +10,17 @@ const FULL_HEART = '♥'
    mimicServerCall("para1")
    .then(() => {
     const heart = e.target
-    if(heart.innerText == EMPTY_HEART) {
+    if(heart.innerText === EMPTY_HEART) {
       heart.innerText = FULL_HEART
       heart.className = "activated-heart"
     }
-    else {heart.innerText == FULL_HEART
+    else {
       heart.innertext = EMPTY_HEART
-      heart.className = "activated-heart".remove
+      heart.className = ""
     }
    })
-  //console.log("like")
- }
+    console.log("like")
+  }
  // grabs each of the like buttons and console.logs "like" when clicked
 for (const heartTag of heartTags) {
   heartTag.addEventListener("click",handleLike) 
