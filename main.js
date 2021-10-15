@@ -3,16 +3,30 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
- const heartTags = document.querySelectorAll('span.like-glyph')
+ const heartTags = document.querySelectorAll('.like-glyph')
  console.log(heartTags)
 
+ const handleLike = (e) => {
+   mimicServerCall("para1")
+   .then(() => {
+    const heart = e.target
+    if(heart.innerText == EMPTY_HEART) {
+      heart.innerText = FULL_HEART
+      heart.className = "activated-heart"
+    }
+    else {heart.innerText == FULL_HEART
+      heart.innertext = EMPTY_HEART
+      heart.className = "activated-heart".remove
+    }
+   })
+  //console.log("like")
+ }
  // grabs each of the like buttons and console.logs "like" when clicked
 for (const heartTag of heartTags) {
-  heartTag.addEventListener("click",(e) => {
-    console.log("like")
-  })
-  
+  heartTag.addEventListener("click",handleLike) 
 }
+
+
 
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
